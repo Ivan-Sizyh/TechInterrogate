@@ -24,8 +24,6 @@ gem 'caxlsx', '~> 3.1'
 gem 'caxlsx_rails', '~> 0.6'
 gem 'dotenv-rails', '~> 2.7'
 gem 'draper', '~> 4.0'
-gem 'i18n-tasks', '~> 0.9.34'
-gem 'lokalise_rails', '~> 3'
 gem 'pagy', '~> 5.0'
 gem 'pundit', '~> 2.1'
 gem 'rails-i18n', '~> 7'
@@ -67,3 +65,5 @@ group :test do
   gem 'timecop'
   gem 'benchmark-ips', require: 'benchmark/ips'
 end
+
+gem "jquery-rails", "~> 4.6"

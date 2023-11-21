@@ -1,0 +1,19 @@
+ru:
+  nav:
+    questions: Вопросы
+  buttons:
+    apply: "Применить"
+  entities:
+    vacancy: Вакансия
+    tag: Тег
+    vacancy_with_title: "Вакансия: %{title}"
+  footer:
+    about: "Автор: Иван Сизых"
+  vacancy:
+    show:
+      select_tag: "Выберите тег:"
+      description:
+        label: "Описание вакансии"
+    index: "Вопросы с собеседований"
+    vacancy: "Вакансия: %{vacancy}"
+    no_questions: Для данной вакансии вопросы отсутствуют.

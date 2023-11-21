@@ -1,0 +1,8 @@
+.card-title a {
+  text-decoration: none;
+  transition: border-bottom 0.3s;
+}
+
+.card-title a:hover {
+  border-bottom: 2px solid #007bff;
+}

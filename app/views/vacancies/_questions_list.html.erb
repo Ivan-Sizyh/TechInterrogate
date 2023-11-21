@@ -1,0 +1,23 @@
+<% if @questions.present? %>
+  <div class="col-md-10 mt-5 mb-3">
+    <table class="table table-sm table-hover">
+      <thead>
+        <tr>
+          <th><%= t('entities.vacancy') %></th>
+          <th><%= t('entities.tag') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @questions.each do |question| %>
+          <tr>
+            <td class="display-7"><%= link_to question.text, question_path(question) %></td>
+            <td class="display-7"><%= question.tag.title %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+<% else %>
+  <div class="col-md-10 mt-3 mb-3">
+    <p class="mt-5 display-6"><%= t('vacancy.no_questions') %></p>
+  </div>
+<% end %>
