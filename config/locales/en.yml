@@ -18,3 +18,4 @@ en:
     index: "Interview questions"
     vacancy: "Vacancy: %{vacancy}"
     no_questions: No more questions for this vacancy
+    questions_count: "Qestions count: %{count}"

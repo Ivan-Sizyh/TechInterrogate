@@ -7,14 +7,11 @@
     "build:css:prefix": "postcss ./app/assets/builds/application.css --use=autoprefixer --output=./app/assets/builds/application.css",
     "watch:css": "nodemon --watch ./app/assets/stylesheets/ --ext scss --exec \"yarn build:css\""
   },
-  "devDependencies": {
-    "esbuild": "^0.19.5"
-  },
   "dependencies": {
-    "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^7.3.0",
     "@popperjs/core": "^2.11.8",
     "@rails/activestorage": "^7.0.0",
+    "@rails/request.js": "^0.0.9",
     "@rails/ujs": "^7.0.0",
     "autoprefixer": "^10.4.16",
     "bootstrap": "^5.3.2",
@@ -29,5 +26,9 @@
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "packageManager": "yarn@1.22.17",
+  "devDependencies": {
+    "esbuild": "^0.19.7"
+  }
 }

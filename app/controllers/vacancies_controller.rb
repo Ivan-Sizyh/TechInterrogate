@@ -11,14 +11,17 @@ class VacanciesController < ApplicationController
                  else
                    @vacancy.questions.includes(:tag)
                  end
+    if @vacancy.cached_questions_count.nil?
+      @vacancy.calculate_questions_count
+    end
   end
+
+  private
 
   def filter_by_tag
     @questions = load_filtered_questions
     render partial: 'questions_list', locals: { questions: @questions }
   end
-
-  private
 
   def set_vacancy
     @vacancy = Vacancy.includes(:questions).find(params[:id])
