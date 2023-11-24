@@ -11,9 +11,6 @@ class VacanciesController < ApplicationController
                  else
                    @vacancy.questions.includes(:tag)
                  end
-    if @vacancy.cached_questions_count.nil?
-      @vacancy.calculate_questions_count
-    end
   end
 
   private

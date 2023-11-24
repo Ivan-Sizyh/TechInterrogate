@@ -1,9 +1,9 @@
 class Vacancy < ApplicationRecord
   has_many :questions
 
-  attr_accessor :cached_questions_count
-
-  def calculate_questions_count
-    self.cached_questions_count = questions.count
+  def questions_count
+    Rails.cache.fetch("vacancy_#{id}_questions_count", expires_in: 1.day) do
+      questions.size
+    end
   end
 end
