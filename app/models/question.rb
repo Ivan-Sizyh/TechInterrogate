@@ -1,5 +1,6 @@
-class Question < ApplicationRecord
+# frozen_string_literal: true
+
+class Question < ApplicationRecord # rubocop:disable Style/Documentation
   belongs_to :vacancy
-  has_one :question_tag
-  has_one :tag, through: :question_tag, class_name: 'Tag'
+  belongs_to :tag, class_name: 'Tag', foreign_key: 'tag_id'
 end

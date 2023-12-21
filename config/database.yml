@@ -5,22 +5,23 @@ default: &default
 
 development:
   <<: *default
-  database: development_database
+  database: teachinterrogate_dev
   username: ivansizyh
   password: 123456
   host: localhost
+  template: template0
 
 test:
   <<: *default
   adapter: postgresql
-  database: test_database
+  database: teachinterrogate_test
   username: ivansizyh
   password: 123456
   host: localhost
 
 production:
   <<: *default
-  database: production_database
+  database: teachinterrogate_production
   username: ivansizyh
   password: 123456
   host: localhost
