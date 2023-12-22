@@ -8,30 +8,19 @@ class VacanciesController < ApplicationController # rubocop:disable Style/Docume
   end
 
   def show
-    @questions = if @vacancy.questions.any? && params[:tag_id].present?
-                   @vacancy.questions.includes(:tag).where(tags: { id: params[:tag_id] })
-                 else
-                   @vacancy.questions.includes(:tag)
-                 end
+    if params[:tag_id].present?
+      @tag = Tag.find(params[:tag_id])
+      @questions = @vacancy.questions.where(tag: @tag)
+    else
+      @questions = @vacancy.questions
+    end
+
     @tags = @vacancy.questions.includes(:tag).flat_map(&:tag).uniq
   end
 
   private
 
-  def filter_by_tag
-    @questions = load_filtered_questions
-    render partial: 'questions_list', locals: { questions: @questions }
-  end
-
   def set_vacancy
-    @vacancy = Vacancy.includes(:questions).find(params[:id])
-  end
-
-  def load_filtered_questions
-    if params[:tag_id].present?
-      @vacancy.questions.includes(:tag).where(tags: { id: params[:tag_id] })
-    else
-      @vacancy.questions.includes(:tag)
-    end
+    @vacancy = Vacancy.find(params[:id])
   end
 end

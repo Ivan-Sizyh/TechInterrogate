@@ -16,7 +16,28 @@
           </select>
         </form>
       </div>
-        <%= render partial: 'questions_list', locals: { questions: @questions } %>
+      
+      <div class="col-md-10 mt-3 mb-3">
+        <% if @questions.any? %>
+          <table class="table table-sm table-hover">
+            <thead>
+              <tr>
+                <th><%= t('entities.vacancy') %></th>
+                <th><%= t('entities.tag') %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @questions.each do |question| %>
+                <tr>
+                  <td class="display-7"><%= link_to(question.text.html_safe, question, class: 'link-without-decoration') %></td>
+                  <td class="display-7"><%= question.tag.title.html_safe %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% else %>
+          <p class="display-6"><%= t('vacancy.no_questions') %></p>
+        <% end %>
       </div>
     </div>
   </div>
