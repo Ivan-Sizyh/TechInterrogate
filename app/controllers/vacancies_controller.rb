@@ -8,14 +8,14 @@ class VacanciesController < ApplicationController # rubocop:disable Style/Docume
   end
 
   def show
-    if params[:tag_id].present?
-      @tag = Tag.find(params[:tag_id])
-      @questions = @vacancy.questions.where(tag: @tag)
-    else
-      @questions = @vacancy.questions
-    end
+    tag_id = params[:tag_id]
 
-    @tags = @vacancy.questions.includes(:tag).flat_map(&:tag).uniq
+    @questions = if tag_id.present?
+                   @vacancy.questions.where(tag: Tag.find_by(id: tag_id))
+                 else
+                   @vacancy.questions
+                 end
+    @tags = @vacancy.questions.includes([:tag]).flat_map(&:tag).uniq
   end
 
   private

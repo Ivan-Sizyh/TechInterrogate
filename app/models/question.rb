@@ -2,5 +2,17 @@
 
 class Question < ApplicationRecord # rubocop:disable Style/Documentation
   belongs_to :vacancy
-  belongs_to :tag, class_name: 'Tag', foreign_key: 'tag_id'
+  belongs_to :tag, class_name: 'Tag', foreign_key: 'tag_id', optional: true
+
+  before_save :set_default_tag_if_none
+
+  private
+
+  def set_default_tag_if_none
+    return if tag.present?
+
+    default_tag = Tag.find_or_create_by(title: 'Нет')
+
+    self.tag = default_tag if default_tag.present?
+  end
 end
