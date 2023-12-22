@@ -1,16 +1,4 @@
-<div class="container">
-  <h1 class="mt-5 mb-5 fs-3"> <%= t('vacancy.index') %> </h1>
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 mb-5">
-    <% @vacancies.each do |vacancy| %>
-      <div class="col">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">
-              <%= link_to vacancy.title, vacancy_path(vacancy) %>
-            </h5>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>  
+<h1 class="mt-5 mb-5 fs-3"> <%= t('vacancy.index') %> </h1>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 mb-5">
+<%= render @vacancies %>
+</div>
