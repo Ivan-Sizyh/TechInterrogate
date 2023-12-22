@@ -15,7 +15,7 @@ class VacanciesController < ApplicationController # rubocop:disable Style/Docume
                  else
                    @vacancy.questions
                  end
-    @tags = @vacancy.questions.includes([:tag]).flat_map(&:tag).uniq
+    @tags = @vacancy.questions.includes(:tag).flat_map(&:tag).uniq
   end
 
   private
