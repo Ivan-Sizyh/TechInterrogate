@@ -2,7 +2,7 @@
 
 class Question < ApplicationRecord # rubocop:disable Style/Documentation
   belongs_to :vacancy
-  belongs_to :tag, class_name: 'Tag', foreign_key: 'tag_id', optional: true
+  belongs_to :tag, optional: true
 
   has_many :answers
   has_many :video_links
