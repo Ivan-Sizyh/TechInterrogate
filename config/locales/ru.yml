@@ -1,6 +1,7 @@
 ru:
   nav:
     questions: Вопросы
+    interviews: Собеседования
   buttons:
     apply: "Применить"
   entities:

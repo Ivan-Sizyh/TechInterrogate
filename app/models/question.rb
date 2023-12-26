@@ -4,6 +4,7 @@ class Question < ApplicationRecord
 
   has_many :answers
   has_many :video_links
+  has_many :videos, through: :video_links
 
   before_save :set_default_tag_if_none
 

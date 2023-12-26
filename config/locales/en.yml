@@ -1,6 +1,7 @@
 en:
   nav:
     questions: Questions
+    interviews: Interviews
   buttons:
     apply: "Apply"
   hello: "Hello World!"
