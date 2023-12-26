@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-class Vacancy < ApplicationRecord # rubocop:disable Style/Documentation
+class Vacancy < ApplicationRecord
   has_many :questions
 
   def questions_count

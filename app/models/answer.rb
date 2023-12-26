@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
-class Answer < ApplicationRecord # rubocop:disable Style/Documentation
+class Answer < ApplicationRecord
   belongs_to :question
 end

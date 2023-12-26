@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-class QuestionsController < ApplicationController # rubocop:disable Style/Documentation
+class QuestionsController < ApplicationController
   before_action :find_question, only: %i[show]
 
   def show

@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-class Question < ApplicationRecord # rubocop:disable Style/Documentation
+class Question < ApplicationRecord
   belongs_to :vacancy
   belongs_to :tag, optional: true
 

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
-class VideoLink < ApplicationRecord # rubocop:disable Style/Documentation
+class VideoLink < ApplicationRecord
   belongs_to :question
 end

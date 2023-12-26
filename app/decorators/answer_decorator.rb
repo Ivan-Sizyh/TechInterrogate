@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-class AnswerDecorator < Draper::Decorator # rubocop:disable Style/Documentation
+class AnswerDecorator < Draper::Decorator
   delegate_all
 
   # Define presentation-specific methods here. Helpers are accessed through

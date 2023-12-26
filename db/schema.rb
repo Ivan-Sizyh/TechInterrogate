@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 enable_extension 'plpgsql'
 
 ActiveRecord::Schema[7.0].define(version: 20_231_222_121_248) do
@@ -12,9 +10,7 @@ ActiveRecord::Schema[7.0].define(version: 20_231_222_121_248) do
     t.datetime 'updated_at', null: false
     t.index ['question_id'], name: 'index_answers_on_question_id'
   end
-end
 
-ActiveRecord::Schema[7.0].define(version: 20_231_222_121_248) do
   create_table 'questions', force: :cascade do |t|
     t.string 'text'
     t.bigint 'vacancy_id', null: false
@@ -26,26 +22,20 @@ ActiveRecord::Schema[7.0].define(version: 20_231_222_121_248) do
     t.index ['tag_id'], name: 'index_questions_on_tag_id'
     t.index ['vacancy_id'], name: 'index_questions_on_vacancy_id'
   end
-end
 
-ActiveRecord::Schema[7.0].define(version: 20_231_222_121_248) do
   create_table 'tags', force: :cascade do |t|
     t.string 'title'
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
   end
-end
 
-ActiveRecord::Schema[7.0].define(version: 20_231_222_121_248) do
   create_table 'vacancies', force: :cascade do |t|
     t.string 'title'
     t.text 'description'
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
   end
-end
 
-ActiveRecord::Schema[7.0].define(version: 20_231_222_121_248) do
   create_table 'video_links', force: :cascade do |t|
     t.string 'text', null: false
     t.string 'video_id', null: false
@@ -55,9 +45,7 @@ ActiveRecord::Schema[7.0].define(version: 20_231_222_121_248) do
     t.datetime 'updated_at', null: false
     t.index ['question_id'], name: 'index_video_links_on_question_id'
   end
-end
 
-ActiveRecord::Schema[7.0].define(version: 20_231_222_121_248) do
   add_foreign_key 'answers', 'questions'
   add_foreign_key 'questions', 'tags'
   add_foreign_key 'questions', 'vacancies'
