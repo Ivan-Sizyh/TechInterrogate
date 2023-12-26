@@ -1,4 +1,6 @@
-class VacanciesController < ApplicationController
+# frozen_string_literal: true
+
+class VacanciesController < ApplicationController # rubocop:disable Style/Documentation
   before_action :set_vacancy, only: %i[show]
 
   def index

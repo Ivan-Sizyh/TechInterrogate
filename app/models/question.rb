@@ -1,9 +1,8 @@
-class Question < ApplicationRecord
-  belongs_to :vacancy
-  belongs_to :tag, optional: true
+# frozen_string_literal: true
 
-  has_many :answers
-  has_many :video_links
+class Question < ApplicationRecord # rubocop:disable Style/Documentation
+  belongs_to :vacancy
+  belongs_to :tag, class_name: 'Tag', foreign_key: 'tag_id', optional: true
 
   before_save :set_default_tag_if_none
 

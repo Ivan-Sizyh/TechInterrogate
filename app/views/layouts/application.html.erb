@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-    <link rel="icon" href="/assets/favicons/favicon.ico" type="image/png">
+    <link rel="icon" type="image/ico" href="favicon.ico">
   </head>
 
   <body>
@@ -17,9 +17,7 @@
 
     <%= render 'shared/nav' %>
 
-    <div class='container'>
-      <%= yield %>
-    </div>
+    <%= yield %>
 
     <%= render 'shared/footer' %>
   </body>
