@@ -34,6 +34,7 @@ gem 'rails-i18n', '~> 7'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip', '~> 2'
 gem 'sidekiq', '~> 6'
+
 gem 'validates_timeliness'
 
 group :development, :test do

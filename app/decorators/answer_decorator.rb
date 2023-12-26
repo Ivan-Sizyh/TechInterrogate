@@ -1,4 +1,4 @@
-class HomeControllerDecorator < Draper::Decorator
+class AnswerDecorator < Draper::Decorator
   delegate_all
 
   # Define presentation-specific methods here. Helpers are accessed through

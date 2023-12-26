@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-module ApplicationHelper # rubocop:disable Style/Documentation
+module ApplicationHelper
   def current_year
     Date.current.year
   end
