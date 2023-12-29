@@ -6,6 +6,7 @@ en:
     apply: "Apply"
   hello: "Hello World!"
   entities:
+    question: Question
     vacancy: Vacancy
     tag: Tag
     vacancy_with_title: "Vacancy: %{title}"

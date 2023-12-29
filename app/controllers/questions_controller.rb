@@ -9,6 +9,6 @@ class QuestionsController < ApplicationController
   private
 
   def find_question
-    @question = Question.includes(:answers).find(params[:id])
+    @question = Question.includes(:answers, :videos).find(params[:id])
   end
 end

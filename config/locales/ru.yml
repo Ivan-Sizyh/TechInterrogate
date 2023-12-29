@@ -5,6 +5,7 @@ ru:
   buttons:
     apply: "Применить"
   entities:
+    question: Вопрос
     vacancy: Вакансия
     tag: Тег
     vacancy_with_title: "Вакансия: %{title}"

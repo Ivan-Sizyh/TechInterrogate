@@ -8,12 +8,13 @@ class VacanciesController < ApplicationController
   def show
     tag_id = params[:tag_id]
 
-    @questions = if tag_id.present?
-                   @vacancy.questions.where(tag: Tag.find_by(id: tag_id))
-                 else
-                   @vacancy.questions
-                 end
-    @tags = @vacancy.questions.includes(:tag).flat_map(&:tag).uniq
+    @questions = @vacancy.questions.includes(:tag)
+
+    @tags = @questions.map(&:tag).uniq
+
+    if tag_id.present?
+      @questions = @questions.select { |question| question.tag_id == tag_id.to_i }
+    end
   end
 
   private
