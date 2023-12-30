@@ -1,0 +1,8 @@
+<td>
+  <%= link_to interview.video.text, 
+              "https://www.youtube.com/watch?v=#{interview.video.video_id}&t=#{interview.video.timecode}", 
+              target: "_blank", 
+              class: "link-without-decoration" %>
+</td>
+<td><%= interview.vacancy.title %></td>
+<td><%= interview.grade.title %></td>

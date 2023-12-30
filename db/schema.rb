@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_27_121248) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_30_083106) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,30 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_27_121248) do
     t.text "additional"
     t.string "additioner"
     t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "grades", force: :cascade do |t|
+    t.string "title", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "interview_videos", force: :cascade do |t|
+    t.bigint "interview_id", null: false
+    t.bigint "video_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["interview_id"], name: "index_interview_videos_on_interview_id"
+    t.index ["video_id"], name: "index_interview_videos_on_video_id"
+  end
+
+  create_table "interviews", force: :cascade do |t|
+    t.bigint "vacancy_id", null: false
+    t.bigint "grade_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["grade_id"], name: "index_interviews_on_grade_id"
+    t.index ["vacancy_id"], name: "index_interviews_on_vacancy_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -67,6 +91,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_27_121248) do
   end
 
   add_foreign_key "answers", "questions"
+  add_foreign_key "interview_videos", "interviews"
+  add_foreign_key "interview_videos", "videos"
+  add_foreign_key "interviews", "grades"
+  add_foreign_key "interviews", "vacancies"
   add_foreign_key "questions", "tags"
   add_foreign_key "questions", "vacancies"
   add_foreign_key "video_links", "questions"

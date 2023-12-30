@@ -1,4 +1,6 @@
 ru:
+  selectors:
+    all: Все
   nav:
     questions: Вопросы
     interviews: Собеседования
@@ -8,6 +10,8 @@ ru:
     question: Вопрос
     vacancy: Вакансия
     tag: Тег
+    video: Видео
+    grade: Грейд
     vacancy_with_title: "Вакансия: %{title}"
   footer:
     about: "Автор: Иван Сизых"
@@ -20,3 +24,9 @@ ru:
     vacancy: "Вакансия: %{vacancy}"
     no_questions: Для данной вакансии вопросы отсутствуют.
     questions_count: "Количество вопросов: %{count}"
+  interviews:
+    index: Собеседования
+    no_interview: Еще не создано интервью!
+  answers:
+    answer_by: "Ответ от %{responder}:"
+    answer_date: "Дата ответа: %{date}"
