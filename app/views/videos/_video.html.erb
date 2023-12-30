@@ -1,0 +1,7 @@
+<li class="youtube-list-item">
+  <%= image_tag("icons8-youtube-play.svg", alt: "YouTube Icon", class: "youtube-icon") %>
+  <%= link_to video[:text], 
+      "https://www.youtube.com/watch?v=#{video[:video_id]}&t=#{video[:timecode]}", 
+      target: "_blank", 
+      class: "link-without-decoration" %>
+</li>

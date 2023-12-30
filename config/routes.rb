@@ -3,6 +3,8 @@
 Rails.application.routes.draw do
   root 'vacancies#index'
 
+  resources :interviews
+
   resources :vacancies do
     resources :questions, shallow: true
 

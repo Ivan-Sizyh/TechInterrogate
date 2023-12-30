@@ -1,0 +1,17 @@
+<div class="col-md-10 mt-3 mb-3">
+  <% if @questions.present? %>
+    <table class="table table-sm table-hover">
+      <thead>
+        <tr>
+          <th><%= t('entities.question') %></th>
+          <th><%= t('entities.tag') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @questions %>
+      </tbody>
+    </table>
+  <% else %>
+    <p class="display-6"><%= t('vacancy.no_questions') %></p>
+  <% end %>
+</div>

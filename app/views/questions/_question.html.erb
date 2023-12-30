@@ -1,0 +1,4 @@
+<tr>
+  <td class="display-7"><%= link_to(raw(question.text), question, class: 'link-without-decoration') %></td>
+  <td class="display-7"><%= raw(@tags.find { |tag| tag.id == question.tag_id }.title) %></td>
+</tr>

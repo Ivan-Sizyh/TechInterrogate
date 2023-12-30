@@ -32,18 +32,17 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  config.action_controller.perform_caching = false
-  if Rails.root.join('tmp/caching-dev.txt').exist?
-    config.action_controller.enable_fragment_cache_logging = true
+  config.action_controller.perform_caching = true
+  config.action_controller.enable_fragment_cache_logging = true
 
-    config.cache_store = :memory_store
-    config.public_file_server.headers = {
-      'Cache-Control' => "public, max-age=#{2.days.to_i}"
-    }
-  else
+  config.cache_store = :redis_cache_store, {
+    url: 'redis://localhost:6379/0',
+    namespace: 'development_cache'
+  }
 
-    config.cache_store = :null_store
-  end
+  config.public_file_server.headers = {
+    'Cache-Control' => "public, max-age=#{2.days.to_i}"
+  }
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
@@ -82,4 +81,6 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.perform_deliveries = true
   config.public_file_server.enabled = true
+
+  config.web_console.development_only = true
 end
