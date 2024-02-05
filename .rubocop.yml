@@ -1,6 +1,9 @@
 AllCops:
   NewCops: enable
 
+require:
+  - rubocop-performance
+
 Metrics/CyclomaticComplexity:
   Enabled: false
 
@@ -13,11 +16,11 @@ Metrics/MethodLength:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Metrics/LineLength:
-  Enabled: false
-
 Metrics/BlockLength:
   Enabled: false
 
 Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
   Enabled: false

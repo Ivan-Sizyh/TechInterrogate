@@ -8,7 +8,7 @@ class Question < ApplicationRecord
 
   before_save :set_default_tag_if_none
 
-  after_commit :update_questions_count_cache, on: [:create, :destroy]
+  after_commit :update_questions_count_cache, on: %i[create destroy]
 
   private
 

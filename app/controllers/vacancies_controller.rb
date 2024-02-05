@@ -12,9 +12,9 @@ class VacanciesController < ApplicationController
 
     @tags = @questions.map(&:tag).uniq
 
-    if tag_id.present?
-      @questions = @questions.select { |question| question.tag_id == tag_id.to_i }
-    end
+    return unless tag_id.present?
+
+    @questions = @questions.select { |question| question.tag_id == tag_id.to_i }
   end
 
   private

@@ -58,7 +58,7 @@ Question.create!([
                  ])
 
 Grade.create!([
-                 { title: 'Junior' },
-                 { title: 'Middle' },
-                 { title: 'Senior' }
-])
+                { title: 'Junior' },
+                { title: 'Middle' },
+                { title: 'Senior' }
+              ])

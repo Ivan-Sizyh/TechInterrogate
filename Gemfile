@@ -40,6 +40,7 @@ gem 'validates_timeliness'
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'faker', '~> 2'
+  gem 'fasterer'
   gem 'pry-rails'
 end
 
