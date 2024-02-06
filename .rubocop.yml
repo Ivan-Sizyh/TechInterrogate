@@ -26,4 +26,5 @@ Layout/LineLength:
   Enabled: false
 
 Metrics/AbcSize:
-  Enabled: false  
+  Enabled: false
+  

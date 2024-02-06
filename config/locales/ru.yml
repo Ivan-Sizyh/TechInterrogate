@@ -31,3 +31,4 @@ ru:
   answers:
     answer_by: "Ответ от %{responder}:"
     answer_date: "Дата ответа: %{date}"
+    
