@@ -20,6 +20,7 @@ en:
   vacancy:
     show:
       select_tag: "Select tag:"
+      select_grade: "Select grade:"
       description:
         label: "Description vacancy"
     index: "Interview questions"

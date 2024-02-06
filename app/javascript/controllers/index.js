@@ -9,3 +9,6 @@ application.register("tags", TagsController)
 
 import VacancyController from "./vacancy_controller"
 application.register("vacancies", VacancyController)
+
+import GradeController from "./grade_controller"
+application.register("grades", GradeController)

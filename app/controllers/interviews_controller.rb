@@ -1,13 +1,13 @@
 class InterviewsController < ApplicationController
   def index
-    @vacancies = Vacancy.all
-
     @vacancy_id = params[:vacancy_id]
 
-    @interviews = if @vacancy_id.present?
-                    Interview.eager_load(:video, :vacancy, :grade).where(vacancy_id: @vacancy_id)
-                  else
-                    Interview.eager_load(:video, :vacancy, :grade).all
-                  end
+    @grade_id = params[:grade_id]
+
+    @interviews = Interview.includes(:video, :vacancy, :grade)
+
+    @interviews = @interviews.where(vacancy_id: @vacancy_id) if @vacancy_id.present?
+
+    @interviews = @interviews.where(grade_id: @grade_id) if @grade_id.present?
   end
 end

@@ -14,7 +14,7 @@ class VacanciesController < ApplicationController
 
     return unless tag_id.present?
 
-    @questions = @questions.select { |question| question.tag_id == tag_id.to_i }
+    @questions = @questions.where(tag: tag_id)
   end
 
   private

@@ -3,20 +3,20 @@ import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
   static targets = ["grade", "vacancy"];
 
-  selectVacancy() {
+  selectGrade() {
     const selectedVacancyId = this.vacancyTarget.value;
     const selectedGradeId = this.gradeTarget.value;
 
     const url = new URL(window.location.href);
 
-    if (selectedVacancyId === '') {
-      url.searchParams.delete("vacancy_id");
+    if (selectedGradeId === '') {
+      url.searchParams.delete("grade_id");
     } else {
-      url.searchParams.set("vacancy_id", selectedVacancyId);
+      url.searchParams.set("grade_id", selectedGradeId);
     }
 
-    if (selectedGradeId) {
-      url.searchParams.set("grade_id", selectedGradeId);
+    if (selectedVacancyId) {
+      url.searchParams.set("vacancy_id", selectedVacancyId);
     }
 
     window.location.href = url.toString();

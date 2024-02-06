@@ -18,6 +18,7 @@ ru:
   vacancy:
     show:
       select_tag: "Выберите тег:"
+      select_grade: "Выберите грейд:"
       description:
         label: "Описание вакансии"
     index: "Вопросы с собеседований"
