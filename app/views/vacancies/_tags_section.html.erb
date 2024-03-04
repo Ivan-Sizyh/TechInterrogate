@@ -1,0 +1,13 @@
+<div class="col-md-2 mt-3 mb-3">
+  <form action="<%= vacancy_path(vacancy) %>" method="get" class="mb-5">
+    <label for="tagFilter" class="mb-2"><%= t('vacancy.show.select_tag') %></label>
+    <select class="form-select mb-2" id="tagFilter" name="tag_id" data-tags-target="tag" data-controller="tags" data-action="tags#selectTag">
+      <option value="" <%= 'selected' if params[:tag_id].blank? %>>Все</option>
+      <% tags.each do |tag| %>
+        <option value="<%= tag.id %>" <%= 'selected' if params[:tag_id] == tag.id.to_s %>>
+          <%= tag.title %>
+        </option>
+      <% end %>
+    </select>
+  </form>
+</div>

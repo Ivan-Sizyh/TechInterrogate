@@ -1,21 +1,37 @@
 en:
   nav:
     questions: Questions
+    interviews: Interviews
+  selectors:
+    all: All
   buttons:
     apply: "Apply"
   hello: "Hello World!"
   entities:
+    question: Question
     vacancy: Vacancy
     tag: Tag
+    interview: Interview
+    video: Video
+    grade: Grade
     vacancy_with_title: "Vacancy: %{title}"
   footer:
     about: "Author: Ivan Sizyh"
   vacancy:
     show:
       select_tag: "Select tag:"
+      select_grade: "Select grade:"
       description:
         label: "Description vacancy"
     index: "Interview questions"
     vacancy: "Vacancy: %{vacancy}"
     no_questions: No more questions for this vacancy
     questions_count: "Qestions count: %{count}"
+  interviews:
+    index: Interviews
+    no_interview: No more interview!
+  answers:
+    answer_by: "Answer by %{responder}:"
+    answer_date: "Date of answer: %{date}"
+    
+

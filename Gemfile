@@ -38,12 +38,16 @@ gem 'sidekiq', '~> 6'
 gem 'validates_timeliness'
 
 group :development, :test do
+
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'faker', '~> 2'
+  gem 'fasterer'
   gem 'pry-rails'
+
 end
 
 group :development do
+
   gem 'annotate'
   gem 'brakeman', '~> 5.1', require: false
   gem 'bullet'
@@ -54,9 +58,11 @@ group :development do
   gem 'rubocop-performance', '~> 1.11', require: false
   gem 'rubocop-rails', '~> 2.11', require: false
   gem 'web-console'
+
 end
 
 group :test do
+
   gem 'benchmark-ips', require: 'benchmark/ips'
   gem 'capybara'
   gem 'database_cleaner-active_record'
@@ -67,6 +73,7 @@ group :test do
   gem 'simplecov', require: false
   gem 'timecop'
   gem 'webmock'
+
 end
 
 gem 'jquery-rails', '~> 4.6'

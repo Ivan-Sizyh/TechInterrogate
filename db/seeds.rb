@@ -56,3 +56,9 @@ Question.create!([
                      vacancy: vacancy_1c_developer },
                    { text: 'Ваш опыт работы с 1C?', tag: default_tag, vacancy: vacancy_1c_developer }
                  ])
+
+Grade.create!([
+                { title: 'Junior' },
+                { title: 'Middle' },
+                { title: 'Senior' }
+              ])

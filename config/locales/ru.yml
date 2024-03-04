@@ -1,20 +1,34 @@
 ru:
+  selectors:
+    all: Все
   nav:
     questions: Вопросы
+    interviews: Собеседования
   buttons:
     apply: "Применить"
   entities:
+    question: Вопрос
     vacancy: Вакансия
     tag: Тег
+    video: Видео
+    grade: Грейд
     vacancy_with_title: "Вакансия: %{title}"
   footer:
     about: "Автор: Иван Сизых"
   vacancy:
     show:
       select_tag: "Выберите тег:"
+      select_grade: "Выберите грейд:"
       description:
         label: "Описание вакансии"
     index: "Вопросы с собеседований"
     vacancy: "Вакансия: %{vacancy}"
     no_questions: Для данной вакансии вопросы отсутствуют.
     questions_count: "Количество вопросов: %{count}"
+  interviews:
+    index: Собеседования
+    no_interview: Еще не создано интервью!
+  answers:
+    answer_by: "Ответ от %{responder}:"
+    answer_date: "Дата ответа: %{date}"
+    
