@@ -43,6 +43,8 @@ group :development, :test do
   gem 'faker', '~> 2'
   gem 'fasterer'
   gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 
 end
 
@@ -66,13 +68,12 @@ group :test do
   gem 'benchmark-ips', require: 'benchmark/ips'
   gem 'capybara'
   gem 'database_cleaner-active_record'
-  gem 'factory_bot_rails'
-  gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
   gem 'timecop'
   gem 'webmock'
+  gem 'rails-controller-testing'
 
 end
 
