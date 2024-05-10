@@ -27,7 +27,4 @@ Layout/LineLength:
 
 Metrics/AbcSize:
   Enabled: false
-  
-Layout/EmptyLinesAroundBlockBody:
-  Enabled: true
-  EnforcedStyle: empty_lines
+

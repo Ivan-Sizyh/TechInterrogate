@@ -41,3 +41,8 @@
 !/app/assets/builds/.keep
 
 /node_modules
+
+/config/database.yml
+/.idea
+.ruby-version*
+.ruby-gemset

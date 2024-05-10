@@ -18,10 +18,4 @@ test:
   username: ivansizyh
   password: 123456
   host: localhost
-
-production:
-  <<: *default
-  database: teachinterrogate_production
-  username: ivansizyh
-  password: 123456
-  host: localhost
+  
