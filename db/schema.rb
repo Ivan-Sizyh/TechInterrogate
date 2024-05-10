@@ -83,9 +83,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_30_083106) do
   end
 
   create_table "videos", force: :cascade do |t|
-    t.string "text", null: false
+    t.string "title", null: false
     t.string "video_id", null: false
-    t.string "timecode", null: false
+    t.integer "timecode", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

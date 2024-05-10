@@ -9,6 +9,6 @@ class Video < ApplicationRecord
   private
 
   def check_and_set_timecode
-    self.timecode ||= 0 if timecode.nil?
+    self.timecode ||= 0
   end
 end
