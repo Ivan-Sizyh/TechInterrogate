@@ -6,6 +6,8 @@ class Question < ApplicationRecord
   has_many :video_links
   has_many :videos, through: :video_links
 
+  validates :text, presence: true
+
   before_save :set_default_tag_if_none
 
   after_commit :update_questions_count_cache, on: %i[create destroy]

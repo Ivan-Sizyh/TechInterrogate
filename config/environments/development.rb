@@ -86,5 +86,4 @@ Rails.application.configure do
   config.public_file_server.enabled = true
 
   config.web_console.development_only = true
-
 end

@@ -395,6 +395,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+  arm64-darwin-23
 
 DEPENDENCIES
   activerecord-import (~> 1.2)
@@ -456,4 +457,4 @@ RUBY VERSION
    ruby 3.1.4p223
 
 BUNDLED WITH
-   2.4.20
+   2.3.26
