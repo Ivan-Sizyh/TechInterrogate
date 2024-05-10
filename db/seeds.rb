@@ -62,3 +62,8 @@ Grade.create!([
                 { title: 'Middle' },
                 { title: 'Senior' }
               ])
+
+video = Video.create!(title: "Собеседование 1С", video_id: "fiX5aYJa5pc")
+question = Question.find_by(text: "Почему вы выбрали именно 1C?")
+
+VideoLink.create!(question: question, video: video)
