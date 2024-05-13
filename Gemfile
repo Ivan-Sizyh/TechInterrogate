@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -39,11 +37,11 @@ gem 'validates_timeliness'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails'
   gem 'faker', '~> 2'
   gem 'fasterer'
   gem 'pry-rails'
   gem 'rspec-rails'
-  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -63,12 +61,12 @@ group :test do
   gem 'benchmark-ips', require: 'benchmark/ips'
   gem 'capybara'
   gem 'database_cleaner-active_record'
+  gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
   gem 'timecop'
   gem 'webmock'
-  gem 'rails-controller-testing'
 end
 
 gem 'jquery-rails', '~> 4.6'
