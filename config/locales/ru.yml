@@ -17,7 +17,8 @@ ru:
     about: "Автор: Иван Сизых"
   vacancy:
     show:
-      select_tag: "Выберите тег:"
+      select_tag: "Выберите тэг:"
+      select_vacancy: "Выберите вакансию:"
       select_grade: "Выберите грейд:"
       description:
         label: "Описание вакансии"

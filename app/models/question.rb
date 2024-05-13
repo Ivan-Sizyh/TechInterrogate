@@ -1,6 +1,6 @@
 class Question < ApplicationRecord
   belongs_to :vacancy
-  belongs_to :tag, optional: true
+  belongs_to :tag
 
   has_many :answers
   has_many :video_links
@@ -8,21 +8,15 @@ class Question < ApplicationRecord
 
   validates :text, presence: true
 
-  before_save :set_default_tag_if_none
+  before_validation :default_tag, on: :create
 
   after_commit :update_questions_count_cache, on: %i[create destroy]
 
   private
 
-  def set_default_tag_if_none
-    return if tag.present?
-
-    default_tag = Tag.find_or_create_by(title: 'Нет')
-
-    self.tag = default_tag if default_tag.present?
-  end
-
   def update_questions_count_cache
-    Rails.cache.write("vacancy_#{vacancy.id}_questions_count", vacancy.questions.count, expires_in: 1.hour)
+    return unless destroyed? || persisted?
+
+    QuestionsHelper.update_questions_count_cache(vacancy)
   end
 end
