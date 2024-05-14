@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'vacancies#index'
+  root to: 'vacancies#index'
 
   resources :interviews
 

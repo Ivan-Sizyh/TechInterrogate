@@ -14,6 +14,14 @@ class Question < ApplicationRecord
 
   private
 
+  def default_tag
+    return if tag.present?
+
+    default_tag = Tag.find_or_create_by(title: 'Нет')
+
+    self.tag = default_tag
+  end
+
   def update_questions_count_cache
     return unless destroyed? || persisted?
 

@@ -19,7 +19,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'foreman'
 
 gem 'activerecord-import', '~> 1.2'
-gem 'blueprinter', '~> 0.25'
+gem 'blueprinter'
 gem 'caxlsx', '~> 3.1'
 gem 'caxlsx_rails', '~> 0.6'
 gem 'devise'

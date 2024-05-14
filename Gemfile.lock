@@ -402,7 +402,7 @@ DEPENDENCIES
   annotate
   bcrypt (~> 3.1.7)
   benchmark-ips
-  blueprinter (~> 0.25)
+  blueprinter
   bootsnap
   brakeman (~> 5.1)
   bullet
