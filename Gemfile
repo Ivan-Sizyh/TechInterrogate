@@ -2,13 +2,13 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.4'
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt'
 gem 'cssbundling-rails'
 gem 'jsbundling-rails'
 gem 'pg', '~> 1.2'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.8'
-gem 'redis', '~> 4.0'
+gem 'redis'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
@@ -18,19 +18,19 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'foreman'
 
-gem 'activerecord-import', '~> 1.2'
+gem 'activerecord-import'
 gem 'blueprinter'
-gem 'caxlsx', '~> 3.1'
-gem 'caxlsx_rails', '~> 0.6'
+gem 'caxlsx'
+gem 'caxlsx_rails'
 gem 'devise'
-gem 'dotenv-rails', '~> 2.7'
-gem 'draper', '~> 4.0'
+gem 'dotenv-rails'
+gem 'draper'
 gem 'lograge'
 gem 'pagy', '~> 5.0'
-gem 'pundit', '~> 2.1'
-gem 'rails-i18n', '~> 7'
-gem 'rubyXL', '~> 3.4'
-gem 'rubyzip', '~> 2'
+gem 'pundit'
+gem 'rails-i18n'
+gem 'rubyXL'
+gem 'rubyzip'
 gem 'sidekiq', '~> 6'
 
 gem 'validates_timeliness'
@@ -46,10 +46,10 @@ end
 
 group :development do
   gem 'annotate'
-  gem 'brakeman', '~> 5.1', require: false
+  gem 'brakeman', require: false
   gem 'bullet'
   gem 'letter_opener'
-  gem 'rack-mini-profiler', '~> 2.0'
+  gem 'rack-mini-profiler'
   gem 'rubocop', '~> 1.18', require: false
   gem 'rubocop-i18n', '~> 3', require: false
   gem 'rubocop-performance', '~> 1.11', require: false
@@ -69,4 +69,4 @@ group :test do
   gem 'webmock'
 end
 
-gem 'jquery-rails', '~> 4.6'
+gem 'jquery-rails'
