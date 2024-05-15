@@ -1,11 +1,18 @@
 ru:
+  activerecord:
+    attributes:
+      vacancy:
+        title: "Название"
+        description: "Описание"
   selectors:
     all: Все
   nav:
-    questions: Вопросы
+    vacancies: Вакансии
     interviews: Собеседования
   buttons:
-    apply: "Применить"
+    apply: Применить
+    create_vacancy: Создать вакансию
+    back: Назад
   entities:
     question: Вопрос
     vacancy: Вакансия
@@ -16,20 +23,31 @@ ru:
   footer:
     about: "Автор: Иван Сизых"
   vacancy:
+    create:
+      title: Название
+      description: Описание
     show:
       select_tag: "Выберите тэг:"
       select_vacancy: "Выберите вакансию:"
       select_grade: "Выберите грейд:"
       description:
-        label: "Описание вакансии"
-    index: "Вопросы с собеседований"
+        label: Описание вакансии
+    index: Вопросы с собеседований
     vacancy: "Вакансия: %{vacancy}"
     no_questions: Для данной вакансии вопросы отсутствуют.
     questions_count: "Количество вопросов: %{count}"
   interviews:
     index: Собеседования
-    no_interview: Еще не создано интервью!
+    no_interview: Еще не создано записей собеседований!
   answers:
     answer_by: "Ответ от %{responder}:"
     answer_date: "Дата ответа: %{date}"
+  flash:
+   success_create_vacancy: Вакансия создана успешно!
+   success_delete_vacancy: Вакансия удалена успешно!
+  title_helper:
+    vacancies: Вакансии
+    questions: Вопросы
+    interviews: Собеседования
+
     

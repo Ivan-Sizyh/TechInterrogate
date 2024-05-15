@@ -1,0 +1,25 @@
+<%= render 'shared/errors', object: @vacancy %>
+
+<%= form_with(model: @vacancy, data: { turbo: false }) do |f| %>
+  <div class="mb-3 row">
+    <div class="col-sm-2 col-form-label">
+      <%= f.label :title, t('vacancy.create.title') %>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.text_field :title, placeholder: t('vacancy.create.title'), class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class="col-sm-2 col-form-label">
+      <%= f.label :description, t('vacancy.create.description') %>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.text_area :description, placeholder: t('vacancy.create.description'), class: 'form-control' %>
+    </div>
+  </div>
+
+  <%= f.submit t('buttons.create_vacancy'), class: 'btn btn-primary mb-4 mt-4' %>
+<% end %>

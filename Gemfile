@@ -19,29 +19,14 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'foreman'
 
 gem 'activerecord-import'
-gem 'blueprinter'
-gem 'caxlsx'
-gem 'caxlsx_rails'
-gem 'devise'
-gem 'dotenv-rails'
-gem 'draper'
-gem 'lograge'
 gem 'pagy', '~> 5.0'
-gem 'pundit'
 gem 'rails-i18n'
-gem 'rubyXL'
-gem 'rubyzip'
 gem 'sidekiq', '~> 6'
-
-gem 'validates_timeliness'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'factory_bot_rails'
   gem 'faker', '~> 2'
-  gem 'fasterer'
-  gem 'pry-rails'
-  gem 'rspec-rails'
 end
 
 group :development do
@@ -56,17 +41,3 @@ group :development do
   gem 'rubocop-rails', '~> 2.11', require: false
   gem 'web-console'
 end
-
-group :test do
-  gem 'benchmark-ips', require: 'benchmark/ips'
-  gem 'capybara'
-  gem 'database_cleaner-active_record'
-  gem 'rails-controller-testing'
-  gem 'selenium-webdriver'
-  gem 'shoulda-matchers'
-  gem 'simplecov', require: false
-  gem 'timecop'
-  gem 'webmock'
-end
-
-gem 'jquery-rails'

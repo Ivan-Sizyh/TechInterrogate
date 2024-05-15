@@ -51,10 +51,6 @@ GEM
       globalid (>= 0.3.6)
     activemodel (7.0.8.1)
       activesupport (= 7.0.8.1)
-    activemodel-serializers-xml (1.0.2)
-      activemodel (> 5.x)
-      activesupport (> 5.x)
-      builder (~> 3.1)
     activerecord (7.0.8.1)
       activemodel (= 7.0.8.1)
       activesupport (= 7.0.8.1)
@@ -78,12 +74,8 @@ GEM
       activerecord (>= 3.2, < 8.0)
       rake (>= 10.4, < 14.0)
     ast (2.4.2)
-    base64 (0.2.0)
     bcrypt (3.1.20)
-    benchmark-ips (2.13.0)
-    bigdecimal (3.1.8)
     bindex (0.8.1)
-    blueprinter (1.0.2)
     bootsnap (1.18.3)
       msgpack (~> 1.2)
     brakeman (6.1.2)
@@ -92,75 +84,22 @@ GEM
     bullet (7.1.6)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
-    capybara (3.40.0)
-      addressable
-      matrix
-      mini_mime (>= 0.1.3)
-      nokogiri (~> 1.11)
-      rack (>= 1.6.0)
-      rack-test (>= 0.6.3)
-      regexp_parser (>= 1.5, < 3.0)
-      xpath (~> 3.2)
-    caxlsx (4.1.0)
-      htmlentities (~> 4.3, >= 4.3.4)
-      marcel (~> 1.0)
-      nokogiri (~> 1.10, >= 1.10.4)
-      rubyzip (>= 1.3.0, < 3)
-    caxlsx_rails (0.6.3)
-      actionpack (>= 3.1)
-      caxlsx (>= 3.0)
     childprocess (5.0.0)
-    coderay (1.1.3)
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
-    crack (1.0.0)
-      bigdecimal
-      rexml
     crass (1.0.6)
     cssbundling-rails (1.4.0)
       railties (>= 6.0.0)
-    database_cleaner-active_record (2.1.0)
-      activerecord (>= 5.a)
-      database_cleaner-core (~> 2.0.0)
-    database_cleaner-core (2.0.1)
     date (3.3.4)
     debug (1.9.2)
       irb (~> 1.10)
       reline (>= 0.3.8)
-    devise (4.9.4)
-      bcrypt (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 4.1.0)
-      responders
-      warden (~> 1.2.3)
-    diff-lcs (1.5.1)
-    docile (1.4.0)
-    dotenv (3.1.2)
-    dotenv-rails (3.1.2)
-      dotenv (= 3.1.2)
-      railties (>= 6.1)
-    draper (4.0.2)
-      actionpack (>= 5.0)
-      activemodel (>= 5.0)
-      activemodel-serializers-xml (>= 1.0)
-      activesupport (>= 5.0)
-      request_store (>= 1.0)
-      ruby2_keywords
     erubi (1.12.0)
-    factory_bot (6.4.6)
-      activesupport (>= 5.0.0)
-    factory_bot_rails (6.4.3)
-      factory_bot (~> 6.4)
-      railties (>= 5.0.0)
     faker (2.23.0)
       i18n (>= 1.8.11, < 2)
-    fasterer (0.11.0)
-      ruby_parser (>= 3.19.1)
     foreman (0.88.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    hashdiff (1.1.0)
-    htmlentities (4.3.4)
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
@@ -180,11 +119,6 @@ GEM
       childprocess (~> 5.0)
     letter_opener (1.10.0)
       launchy (>= 2.2, < 4)
-    lograge (0.14.0)
-      actionpack (>= 4)
-      activesupport (>= 4)
-      railties (>= 4)
-      request_store (~> 1.0)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -194,7 +128,6 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.4)
-    matrix (0.4.2)
     method_source (1.1.0)
     mini_mime (1.1.5)
     minitest (5.22.3)
@@ -211,7 +144,6 @@ GEM
     nio4r (2.7.3)
     nokogiri (1.16.5-arm64-darwin)
       racc (~> 1.4)
-    orm_adapter (0.5.0)
     pagy (5.10.1)
       activesupport
     parallel (1.24.0)
@@ -219,18 +151,11 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.6)
-    pry (0.14.2)
-      coderay (~> 1.1)
-      method_source (~> 1.0)
-    pry-rails (0.3.9)
-      pry (>= 0.10.4)
     psych (5.1.2)
       stringio
     public_suffix (5.0.5)
     puma (5.6.8)
       nio4r (~> 2.0)
-    pundit (2.3.2)
-      activesupport (>= 3.0.0)
     racc (1.7.3)
     rack (2.2.9)
     rack-mini-profiler (3.3.1)
@@ -251,10 +176,6 @@ GEM
       activesupport (= 7.0.8.1)
       bundler (>= 1.15.0)
       railties (= 7.0.8.1)
-    rails-controller-testing (1.0.5)
-      actionpack (>= 5.0.1.rc1)
-      actionview (>= 5.0.1.rc1)
-      activesupport (>= 5.0.1.rc1)
     rails-dom-testing (2.2.0)
       activesupport (>= 5.0.0)
       minitest
@@ -280,29 +201,7 @@ GEM
     regexp_parser (2.9.1)
     reline (0.5.7)
       io-console (~> 0.5)
-    request_store (1.7.0)
-      rack (>= 1.4)
-    responders (3.1.1)
-      actionpack (>= 5.2)
-      railties (>= 5.2)
     rexml (3.2.6)
-    rspec-core (3.13.0)
-      rspec-support (~> 3.13.0)
-    rspec-expectations (3.13.0)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.13.0)
-    rspec-mocks (3.13.1)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.13.0)
-    rspec-rails (6.1.2)
-      actionpack (>= 6.1)
-      activesupport (>= 6.1)
-      railties (>= 6.1)
-      rspec-core (~> 3.13)
-      rspec-expectations (~> 3.13)
-      rspec-mocks (~> 3.13)
-      rspec-support (~> 3.13)
-    rspec-support (3.13.1)
     rubocop (1.63.5)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
@@ -327,32 +226,10 @@ GEM
       rubocop (>= 1.33.0, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
     ruby-progressbar (1.13.0)
-    ruby2_keywords (0.0.5)
-    rubyXL (3.4.27)
-      nokogiri (>= 1.10.8)
-      rubyzip (>= 1.3.0)
-    ruby_parser (3.21.0)
-      racc (~> 1.5)
-      sexp_processor (~> 4.16)
-    rubyzip (2.3.2)
-    selenium-webdriver (4.20.1)
-      base64 (~> 0.2)
-      rexml (~> 3.2, >= 3.2.5)
-      rubyzip (>= 1.2.2, < 3.0)
-      websocket (~> 1.0)
-    sexp_processor (4.17.1)
-    shoulda-matchers (6.2.0)
-      activesupport (>= 5.2.0)
     sidekiq (6.5.12)
       connection_pool (>= 2.2.5, < 3)
       rack (~> 2.0)
       redis (>= 4.5.0, < 5)
-    simplecov (0.22.0)
-      docile (~> 1.1)
-      simplecov-html (~> 0.11)
-      simplecov_json_formatter (~> 0.1)
-    simplecov-html (0.12.3)
-    simplecov_json_formatter (0.1.4)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -364,8 +241,6 @@ GEM
       railties (>= 6.0.0)
     stringio (3.1.0)
     thor (1.3.1)
-    timecop (0.9.8)
-    timeliness (0.4.5)
     timeout (0.4.1)
     turbo-rails (2.0.5)
       actionpack (>= 6.0.0)
@@ -375,25 +250,14 @@ GEM
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.5.0)
     uniform_notifier (1.16.0)
-    validates_timeliness (5.0.1)
-      timeliness (>= 0.3.10, < 1)
-    warden (1.2.9)
-      rack (>= 2.0.9)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
-    webmock (3.23.0)
-      addressable (>= 2.8.0)
-      crack (>= 0.3.2)
-      hashdiff (>= 0.4.0, < 2.0.0)
-    websocket (1.2.10)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    xpath (3.2.0)
-      nokogiri (~> 1.8)
     zeitwerk (2.6.14)
 
 PLATFORMS
@@ -404,57 +268,33 @@ DEPENDENCIES
   activerecord-import
   annotate
   bcrypt
-  benchmark-ips
-  blueprinter
   bootsnap
   brakeman
   bullet
-  capybara
-  caxlsx
-  caxlsx_rails
   cssbundling-rails
-  database_cleaner-active_record
   debug
-  devise
-  dotenv-rails
-  draper
-  factory_bot_rails
   faker (~> 2)
-  fasterer
   foreman
   jquery-rails
   jsbundling-rails
   letter_opener
-  lograge
   pagy (~> 5.0)
   pg (~> 1.2)
-  pry-rails
   puma (~> 5.0)
-  pundit
   rack-mini-profiler
   rails (~> 7.0.8)
-  rails-controller-testing
   rails-i18n
   redis
-  rspec-rails
   rubocop (~> 1.18)
   rubocop-i18n (~> 3)
   rubocop-performance (~> 1.11)
   rubocop-rails (~> 2.11)
-  rubyXL
-  rubyzip
-  selenium-webdriver
-  shoulda-matchers
   sidekiq (~> 6)
-  simplecov
   sprockets-rails
   stimulus-rails
-  timecop
   turbo-rails
   tzinfo-data
-  validates_timeliness
   web-console
-  webmock
 
 RUBY VERSION
    ruby 3.1.4p223

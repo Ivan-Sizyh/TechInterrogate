@@ -11,3 +11,12 @@ p {
 .link-without-decoration {
   text-decoration: none;
 }
+
+.field_with_errors {
+  .form-control {
+    border-color: red;
+  }
+  label {
+    color: red;
+  }
+} 

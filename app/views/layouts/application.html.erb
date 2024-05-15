@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TeachInterrogate</title>
+    <meta charset="utf-8">
+    <title><%= full_title(yield(:page_title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
@@ -10,12 +11,13 @@
   </head>
 
   <body>
-    <div id="flash">
-        <%= render 'shared/flash' %>
-    </div>
     <%= render 'shared/nav' %>
 
     <div class='container'>
+      <div id="flash">
+        <%= render 'shared/flash' %>
+      </div>
+
       <%= yield %>
     </div>
 
