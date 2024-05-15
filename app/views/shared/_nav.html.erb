@@ -1,7 +1,17 @@
-<nav>
+<nav class="navbar pt-3 pb-5">
   <div class="container">
-    <%= link_to 'TeachInterrogate', root_path, class: 'logo link-without-decoration' %></li>
-    <%= link_to t('nav.vacancies'), root_path, class: 'link link-without-decoration' %></li>
-    <%= link_to t('nav.interviews'), interviews_path, class: 'link link-without-decoration' %></li>
+    <div class="navbar-left">
+      <%= link_to 'TeachInterrogate', root_path, class: 'logo link-without-decoration' %></li>
+      <%= link_to t('nav.vacancies'), root_path, class: 'link link-without-decoration' %></li>
+      <%= link_to t('nav.interviews'), interviews_path, class: 'link link-without-decoration' %></li>
+    </div>
+    <div class="navbar-right">
+      <% if user_signed_in? %>
+        <p class='link link-without-decoration'><%= current_user.name %></p>
+      <% else %>
+        <%= link_to t('nav.sign_up'), new_user_path, class: 'link link-without-decoration' %></li>
+        <%= link_to t('nav.sign_in'), '#', class: 'link link-without-decoration' %></li>
+      <% end %>
+    </div>
   </div>
 </nav>

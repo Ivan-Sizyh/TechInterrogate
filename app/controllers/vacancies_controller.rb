@@ -10,7 +10,7 @@ class VacanciesController < ApplicationController
   end
 
   def create
-    @vacancy = Vacancy.create(vacancy_params)
+    @vacancy = Vacancy.new(vacancy_params)
 
     if @vacancy.save
       flash[:success] = t('flash.success_create_vacancy')

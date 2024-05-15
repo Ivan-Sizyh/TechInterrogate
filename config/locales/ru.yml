@@ -1,22 +1,56 @@
 ru:
+  registration_page:
+    registration: Регистрация
+    email: Электронная почта
+    name: Имя
+    password: Пароль
+    password_confirmation: Подтверждение пароля
+    old_password: Старый пароль
   pagy:
     nav:
-      next: "Следующая"
-      prev: "Предыдущая"
+      next: Следующая
+      prev: Предыдущая
   activerecord:
     attributes:
       vacancy:
-        title: "Название"
-        description: "Описание"
+        title: Название
+        description: Описание
+      user:
+        password: Пароль
+        email: Электронная почта
+        name: Имя
+        password_confirmation: Подтверждение пароля
+    errors:
+      messages:
+        blank: не может быть пустым
+      models:
+        user:
+          attributes:
+            email:
+              blank: не может быть пустой
+            password:
+              blank: не может быть пустым
+            name:
+              blank: не может быть пустым
+        vacancy:
+          attributes:
+            title:
+              blank: "не может быть пустым"
+            description:
+              blank: "не может быть пустым"
   selectors:
     all: Все
   nav:
     vacancies: Вакансии
     interviews: Собеседования
+    sign_in: Вход
+    sign_up: Регистрация
   buttons:
     apply: Применить
     create_vacancy: Создать вакансию
     back: Назад
+    save: Сохранить
+    register: Зарегестрировать
   entities:
     question: Вопрос
     vacancy: Вакансия
@@ -53,5 +87,6 @@ ru:
     vacancies: Вакансии
     questions: Вопросы
     interviews: Собеседования
+    registration: Регистрация
 
     
