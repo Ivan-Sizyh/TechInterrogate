@@ -1,4 +1,8 @@
 ru:
+  pagy:
+    nav:
+      next: "Следующая"
+      prev: "Предыдущая"
   activerecord:
     attributes:
       vacancy:

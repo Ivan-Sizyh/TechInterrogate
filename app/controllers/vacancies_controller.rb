@@ -2,7 +2,7 @@ class VacanciesController < ApplicationController
   before_action :set_vacancy, only: %i[show destroy]
 
   def index
-    @vacancies = Vacancy.all
+    @pagy, @vacancies = pagy Vacancy.all
   end
 
   def new
