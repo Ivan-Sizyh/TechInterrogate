@@ -1,5 +1,8 @@
 ru:
-  registration_page:
+  pages:
+    login_page:
+      remember_me: Запомнить меня
+    editing: Редактирование
     registration: Регистрация
     email: Электронная почта
     name: Имя
@@ -20,9 +23,12 @@ ru:
         email: Электронная почта
         name: Имя
         password_confirmation: Подтверждение пароля
+        old_password: Старый пароль
     errors:
       messages:
         blank: не может быть пустым
+        incorrect_old_password: не коректен
+        incorrect_hardest_password: "пароль слишком простой. Длина пароля должны быть 8-70 символов и включать: 1 заглавную букву, 1 прописную букву, 1 цифру и 1 специальный символ"
       models:
         user:
           attributes:
@@ -45,12 +51,15 @@ ru:
     interviews: Собеседования
     sign_in: Вход
     sign_up: Регистрация
+    logout: Выход
+    edit_profile: Профиль
   buttons:
     apply: Применить
     create_vacancy: Создать вакансию
     back: Назад
     save: Сохранить
     register: Зарегестрировать
+    login: Войти
   entities:
     question: Вопрос
     vacancy: Вакансия
@@ -83,10 +92,20 @@ ru:
   flash:
    success_create_vacancy: Вакансия создана успешно!
    success_delete_vacancy: Вакансия удалена успешно!
+   welcome_user: "Привет, %{name}!"
+   welcome_back: "С возвращением, %{name}!"
+   see_you_later: До скорого возвращения!
+   missing_email: Неверная электронная почта!
+   incorrect_data: Неверный email и/или пароль!
+   already_sign_in: Вы уже вошли!
+   already_not_sign_in: Вы еще не вошли!
+   successful_update: Данные профиля обновленны
   title_helper:
     vacancies: Вакансии
     questions: Вопросы
     interviews: Собеседования
     registration: Регистрация
+    login: Вход
+    editing: Редактирование
 
     

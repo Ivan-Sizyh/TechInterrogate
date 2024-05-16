@@ -23,6 +23,8 @@ gem 'jquery-rails'
 gem 'pagy', '~> 5.0'
 gem 'rails-i18n'
 gem 'sidekiq', '~> 6'
+gem 'draper'
+gem "valid_email2"
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]

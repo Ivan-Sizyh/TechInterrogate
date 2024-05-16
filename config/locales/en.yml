@@ -1,5 +1,8 @@
 en:
-  registration_page:
+  pages:
+    login_page:
+      remember_me: Remember me
+    editing: Editing
     registration: Registration
     email: Email
     name: Name
@@ -11,11 +14,16 @@ en:
       vacancy:
         title: Title
         description: Description
+    errors:
+      messages:
+        incorrect_hardest_password: "complexity requirement not met. Length should be 8-70 characters and include: 1 uppercase, 1 lowercase, 1 digit and 1 special character"
   nav:
     vacancies: Vacancies
     interviews: Interviews
     sign_up: Sign Up
     sign_in: Sign In
+    logout: Log Out
+    edit_profile: Edit profile
   selectors:
     all: All
   buttons:
@@ -23,6 +31,7 @@ en:
     create_vacancy: Create vacancy
     save: Save
     register: Register
+    login: Log-in
   hello: Hello World!
   entities:
     question: Question
@@ -57,9 +66,19 @@ en:
   flash:
    success_create_vacancy: Vacancy created!
    success_delete_vacancy:  Vacancy deleted!
+   welcome_user: "Welcome, %{name}!"
+   welcome_back: "Welcome back, %{name}!"
+   missing_email: Incorrect email!
+   incorrect_data: Incorrect email and/or password!
+   see_you_later: See you later!
+   already_sign_in: You are already sign in!
+   already_not_sign_in: You are not sign in!
+   successful_update: Profile data updated!
   title_helper:
     vacancies: Vacancies
     questions: Questions
     interviews: Interviews
     registration: Registration
+    login: Log-in
+    editing: Editing
 
