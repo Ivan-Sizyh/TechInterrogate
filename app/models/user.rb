@@ -13,11 +13,15 @@ class User < ApplicationRecord
 
   def remember_me
     self.remember_token = SecureRandom.urlsafe_base64
+    # rubocop:disable Rails/SkipsModelValidations
     update_column :remember_token_digest, digest(remember_token)
+    # rubocop:enable Rails/SkipsModelValidations
   end
 
   def forget_me
+    # rubocop:disable Rails/SkipsModelValidations
     update_column :remember_token_digest, nil
+    # rubocop:enable Rails/SkipsModelValidations
     self.remember_token = nil
   end
 
@@ -35,7 +39,7 @@ class User < ApplicationRecord
            else
              BCrypt::Engine.cost
            end
-    BCrypt::Password.create(string, cost: cost)
+    BCrypt::Password.create(string, cost:)
   end
 
   def correct_old_password
@@ -51,6 +55,6 @@ class User < ApplicationRecord
   end
 
   def password_presence
-    errors.add(:password, :blank) unless password_digest.present?
+    errors.add(:password, :blank) if password_digest.blank?
   end
 end

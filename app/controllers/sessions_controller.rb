@@ -2,14 +2,13 @@ class SessionsController < ApplicationController
   before_action :require_no_authentification, only: %i[new create]
   before_action :require_authentification, only: :destroy
 
-  def new
-  end
+  def new; end
 
   def create
     email = params[:email]
 
     if email.present?
-      user = User.find_by(email: email).decorate
+      user = User.find_by(email:).decorate
 
       if user&.authenticate(params[:password])
         sign_in(user)

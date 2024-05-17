@@ -2,8 +2,8 @@ class Question < ApplicationRecord
   belongs_to :vacancy
   belongs_to :tag
 
-  has_many :answers
-  has_many :video_links
+  has_many :answers, dependent: :destroy
+  has_many :video_links, dependent: :destroy
   has_many :videos, through: :video_links
 
   validates :text, presence: true

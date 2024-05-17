@@ -5,21 +5,6 @@ class VacanciesController < ApplicationController
     @pagy, @vacancies = pagy Vacancy.all
   end
 
-  def new
-    @vacancy = Vacancy.new
-  end
-
-  def create
-    @vacancy = Vacancy.new(vacancy_params)
-
-    if @vacancy.save
-      flash[:success] = t('flash.success_create_vacancy')
-      redirect_to vacancy_path(@vacancy)
-    else
-      render :new
-    end
-  end
-
   def show
     tag_id = params[:tag_id]
 
@@ -32,7 +17,22 @@ class VacanciesController < ApplicationController
     @tags = @questions.map(&:tag).uniq
   end
 
+  def new
+    @vacancy = Vacancy.new
+  end
+
   def edit; end
+
+  def create
+    @vacancy = Vacancy.new(vacancy_params)
+
+    if @vacancy.save
+      flash[:success] = t('flash.success_create_vacancy')
+      redirect_to vacancy_path(@vacancy)
+    else
+      render :new
+    end
+  end
 
   def update; end
 

@@ -10,7 +10,7 @@ module ApplicationHelper
     all_classes = default_classes + additional_classes
 
     link_to 'TeachInterrogate', "https://github.com/#{author}/#{repo}",
-            target: '_blank', rel: 'nofollow', class: all_classes.join(' ')
+            target: '_blank', rel: 'nofollow noopener', class: all_classes.join(' ')
   end
 
   def full_title(page_title)
@@ -24,7 +24,9 @@ module ApplicationHelper
   end
 
   def pagination(obj)
+    # rubocop:disable Rails/OutputSafety
     raw(pagy_bootstrap_nav(obj)) if obj.pages > 1
+    # rubocop:enable Rails/OutputSafety
   end
 
   def pagination?(obj)

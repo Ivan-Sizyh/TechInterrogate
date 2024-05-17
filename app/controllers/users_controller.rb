@@ -7,19 +7,18 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def edit; end
+
   def create
     @user = User.new(user_params).decorate
 
     if @user.save
       sign_in(@user)
-      flash[:success] = t("flash.welcome_back", name: @user.name_or_email)
+      flash[:success] = t('flash.welcome_back', name: @user.name_or_email)
       redirect_to root_path
     else
       render :new
     end
-  end
-
-  def edit
   end
 
   def update

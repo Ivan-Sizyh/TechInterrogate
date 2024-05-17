@@ -4,16 +4,16 @@ module Authentification
   included do
     private
 
-    def current_user(_user = nil)
-      user = if _user.present?
-              user = _user
+    def current_user(user = nil)
+      user = if user.present?
+               user
              elsif session[:user_id].present?
-              user = user_from_session
+               user_from_session
              elsif cookies.encrypted[:remember_token].present?
-              user = user_from_token
+               user_from_token
              end
 
-      @current_user ||= _user&.decorate
+      @current_user ||= user&.decorate
     end
 
     def user_from_token
@@ -27,7 +27,7 @@ module Authentification
     end
 
     def user_from_session
-      @current_user ||= User.find_by(id: session[:user_id]).decorate
+      User.find_by(id: session[:user_id]).decorate
     end
 
     def user_signed_in?
