@@ -1,0 +1,58 @@
+<%= render 'shared/errors', object: @user %>
+
+<%= form_with(model: @user, data: { turbo: false }) do |f| %>
+  <div class="mb-3 row">
+    <div class="col-sm-2 col-form-label">
+      <%= f.label :email, t('pages.email') %>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.email_field :email, placeholder: t('pages.email'), class: 'form-control form-control-lg' %>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class="col-sm-2 col-form-label">
+      <%= f.label :name, t('pages.name') %>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.text_field :name, placeholder: t('pages.name'), class: 'form-control form-control-lg' %>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class="col-sm-2 col-form-label">
+      <%= f.label :password, t('pages.password') %>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.password_field :password, class: 'form-control form-control-lg' %>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class="col-sm-2 col-form-label">
+      <%= f.label :password_confirmation, t('pages.password_confirmation') %>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.password_field :password_confirmation, class: 'form-control form-control-lg' %>
+    </div>
+  </div>
+
+  <% unless @user.new_record? %>
+    <div class="mb-3 row">
+      <div class="col-sm-2 col-form-label">
+        <%= f.label :old_password, t('pages.old_password') %>
+      </div>
+
+      <div class="col-sm-10">
+        <%= f.password_field :old_password, class: 'form-control form-control-lg' %>
+      </div>
+    </div>
+  <% end %>
+
+  <%= f.submit (@user.new_record? ? t('buttons.register') : t('buttons.save')),
+    class: 'btn btn-primary btn-lg mt-4' %>
+<% end %>

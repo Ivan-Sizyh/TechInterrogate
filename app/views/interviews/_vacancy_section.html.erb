@@ -1,21 +1,14 @@
 <form action=<%= interviews_path %> method="get" class="mb-3">
-  <label for="vacanciesFilter" class="mb-2"><%= t('vacancy.show.select_tag') %></label>
+  <label for="vacanciesFilter" class="mb-2"><%= t('vacancy.show.select_vacancy') %></label>
 
-  <select class="form-select mb-2" 
-          id="vacanciesFilter" 
-          name="vacancy_id" 
-          data-vacancies-target="vacancy"
-          data-grades-target="vacancy"
-          data-action="vacancies#selectVacancy">
+  <%= select_tag :vacancy_id, 
+      options_for_select(Vacancy.all.map { |vacancy| [vacancy.title, vacancy.id.to_s] }, params[:vacancy_id]),
+      include_blank: t('selectors.all'),
+      class: "form-select mb-2", 
+      id: "vacanciesFilter", 
+      name: "vacancy_id", 
+      data: { vacancies_target: "vacancy", 
+              grades_target: "vacancy", 
+              action: "vacancies#selectVacancy" } %>
 
-    <option value="" <%= 'selected' if params[:vacancy_id].blank? %>>
-      <%= t('selectors.all') %>
-    </option>
-
-    <% Vacancy.all.each do |vacancy| %>
-      <option value="<%= vacancy.id %>" <%= 'selected' if params[:vacancy_id] == vacancy.id.to_s %>>
-        <%= vacancy.title %>
-      </option>
-    <% end %>
-  </select>
 </form>

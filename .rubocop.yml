@@ -1,8 +1,10 @@
 AllCops:
   NewCops: enable
+  TargetRubyVersion: 3.1.4
 
 require:
   - rubocop-performance
+  - rubocop-rails
 
 Metrics/CyclomaticComplexity:
   Enabled: false

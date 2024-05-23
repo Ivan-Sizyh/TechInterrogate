@@ -1,12 +1,38 @@
 en:
+  pages:
+    login_page:
+      remember_me: Remember me
+    editing: Editing
+    registration: Registration
+    email: Email
+    name: Name
+    password: Password
+    password_confirmation: Password confirmation
+    old_password: Old password
+  activerecord:
+    attributes:
+      vacancy:
+        title: Title
+        description: Description
+    errors:
+      messages:
+        incorrect_hardest_password: "complexity requirement not met. Length should be 8-70 characters and include: 1 uppercase, 1 lowercase, 1 digit and 1 special character"
   nav:
-    questions: Questions
+    vacancies: Vacancies
     interviews: Interviews
+    sign_up: Sign Up
+    sign_in: Sign In
+    logout: Log Out
+    edit_profile: Edit profile
   selectors:
     all: All
   buttons:
-    apply: "Apply"
-  hello: "Hello World!"
+    apply: Apply
+    create_vacancy: Create vacancy
+    save: Save
+    register: Register
+    login: Log-in
+  hello: Hello World!
   entities:
     question: Question
     vacancy: Vacancy
@@ -18,12 +44,16 @@ en:
   footer:
     about: "Author: Ivan Sizyh"
   vacancy:
+    create:
+      title: Title
+      description: Description
     show:
       select_tag: "Select tag:"
+      select_vacancy: "Select vacancy:"
       select_grade: "Select grade:"
       description:
-        label: "Description vacancy"
-    index: "Interview questions"
+        label: Description vacancy
+    index: Interview questions
     vacancy: "Vacancy: %{vacancy}"
     no_questions: No more questions for this vacancy
     questions_count: "Qestions count: %{count}"
@@ -33,5 +63,22 @@ en:
   answers:
     answer_by: "Answer by %{responder}:"
     answer_date: "Date of answer: %{date}"
-    
+  flash:
+   success_create_vacancy: Vacancy created!
+   success_delete_vacancy:  Vacancy deleted!
+   welcome_user: "Welcome, %{name}!"
+   welcome_back: "Welcome back, %{name}!"
+   missing_email: Incorrect email!
+   incorrect_data: Incorrect email and/or password!
+   see_you_later: See you later!
+   already_sign_in: You are already sign in!
+   already_not_sign_in: You are not sign in!
+   successful_update: Profile data updated!
+  title_helper:
+    vacancies: Vacancies
+    questions: Questions
+    interviews: Interviews
+    registration: Registration
+    login: Log-in
+    editing: Editing
 
