@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   include Pagy::Backend
   include Authentification
+  include Authorization
 
   before_action :enable_query_cache
 

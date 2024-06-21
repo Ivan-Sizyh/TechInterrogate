@@ -1,0 +1,7 @@
+<% provide :page_title, 'questions' %>
+
+<p class="mt-3 fs-3"><%= t('pages.create_new_question') %></p>
+
+<%= render 'form' %>
+
+<%= link_to t("buttons.back_to_vacancy"), vacancy_path(@vacancy), class: 'btn btn-secondary mb-4' %>

@@ -9,6 +9,9 @@ ru:
     password: Пароль
     password_confirmation: Подтверждение пароля
     old_password: Старый пароль
+    create_new_vacancy: Создать новую вакансию
+    create_new_question: Создать новый вопрос
+    create_new_answer: Создать новый ответ
   pagy:
     nav:
       next: Следующая
@@ -24,6 +27,8 @@ ru:
         name: Имя
         password_confirmation: Подтверждение пароля
         old_password: Старый пароль
+      answer:
+        text: Текст
     errors:
       messages:
         blank: не может быть пустым
@@ -57,9 +62,16 @@ ru:
     apply: Применить
     create_vacancy: Создать вакансию
     back: Назад
+    back_to_vacancy: Назад к вакансии
     save: Сохранить
     register: Зарегестрировать
     login: Войти
+    delete_vacancy: Удалить вакансию
+    create_question: Создать вопрос
+    delete_question: Удалить вопрос
+    create_answer: Создать ответ
+    delete_answer: Удалить ответ
+    back_to_question: Назад к вопросу
   entities:
     question: Вопрос
     vacancy: Вакансия
@@ -69,6 +81,13 @@ ru:
     vacancy_with_title: "Вакансия: %{title}"
   footer:
     about: "Автор: Иван Сизых"
+  answer:
+    create:
+      text: Текст
+  question:
+    create:
+      text: Текст
+      tag: Тэг
   vacancy:
     create:
       title: Название
@@ -82,7 +101,7 @@ ru:
     index: Вопросы с собеседований
     vacancy: "Вакансия: %{vacancy}"
     no_questions: Для данной вакансии вопросы отсутствуют.
-    questions_count: "Количество вопросов: %{count}"
+    questions_count: "Количество всех вопросов у вакансии: %{count}"
   interviews:
     index: Собеседования
     no_interview: Еще не создано записей собеседований!
@@ -92,6 +111,10 @@ ru:
   flash:
    success_create_vacancy: Вакансия создана успешно!
    success_delete_vacancy: Вакансия удалена успешно!
+   success_create_question: Вопрос создан успешно!
+   success_delete_question: Вопрос удален успешно!
+   success_create_answer: Ответ создан успешно!
+   success_delete_answer: Ответ удален успешно!
    welcome_user: "Привет, %{name}!"
    welcome_back: "С возвращением, %{name}!"
    see_you_later: До скорого возвращения!
@@ -100,9 +123,11 @@ ru:
    already_sign_in: Вы уже вошли!
    already_not_sign_in: Вы еще не вошли!
    successful_update: Данные профиля обновленны
+   not_authorized: Вы не имеете прав для совершения этого действия!
   title_helper:
     vacancies: Вакансии
     questions: Вопросы
+    answers: Ответы
     interviews: Собеседования
     registration: Регистрация
     login: Вход

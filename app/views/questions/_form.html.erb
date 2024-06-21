@@ -1,0 +1,25 @@
+<%= render 'shared/errors', object: @question %>
+
+<%= form_with(model: [@vacancy, @question], data: { turbo: false }) do |f| %>
+  <div class="mb-3 row">
+    <div class="col-sm-2 col-form-label">
+      <%= f.label :text, "#{t('question.create.text')}:"%>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.text_area :text, placeholder: t('question.create.text'), class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class="col-sm-2 col-form-label">
+      <%= f.label :tag, "#{t('question.create.tag')}:" %>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.collection_select :tag_id, Tag.all, :id, :title, {}, { class: 'form-control custom-select-lg' } %>
+    </div>
+  </div>
+
+  <%= f.submit t('buttons.create_question'), class: 'btn btn-primary mb-4 mt-4' %>
+<% end %>

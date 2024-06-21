@@ -9,6 +9,9 @@ en:
     password: Password
     password_confirmation: Password confirmation
     old_password: Old password
+    create_new_vacancy: Create new vacancy
+    create_new_question: Create new question
+    create_new_answer: Create new answer
   activerecord:
     attributes:
       vacancy:
@@ -32,6 +35,13 @@ en:
     save: Save
     register: Register
     login: Log-in
+    delete_vacancy: Delete vacancy
+    create_question: Create question
+    back_to_vacancy: Back to vacancy
+    delete_question: Delete question
+    create_answer: Create answer
+    delete_answer: Delete answer
+    back_to_question: Back to question
   hello: Hello World!
   entities:
     question: Question
@@ -43,6 +53,13 @@ en:
     vacancy_with_title: "Vacancy: %{title}"
   footer:
     about: "Author: Ivan Sizyh"
+  answer:
+    create:
+      text: Text
+  question:
+    create:
+      text: Text
+      tag: Tag
   vacancy:
     create:
       title: Title
@@ -74,9 +91,11 @@ en:
    already_sign_in: You are already sign in!
    already_not_sign_in: You are not sign in!
    successful_update: Profile data updated!
+   not_authorized: You are not authorized!
   title_helper:
     vacancies: Vacancies
     questions: Questions
+    answers: Answers
     interviews: Interviews
     registration: Registration
     login: Log-in

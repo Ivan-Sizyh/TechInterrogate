@@ -10,8 +10,21 @@
   <%= render partial: 'vacancies/questions_table' %>
 </div>
 
-<%= link_to 'Удалить',
-            vacancy_path(@vacancy),
-            method: :delete,
-            class: 'btn btn-primary mb-4',
-            data: { confirm: 'Удалить вакансию?' } %>
+<div class="row">
+  <div class="col-md-2">
+    <% if policy(@vacancy).destroy? %>
+      <%= link_to t('buttons.delete_vacancy'),
+                  vacancy_path(@vacancy),
+                  method: :delete,
+                  class: 'btn btn-primary mb-4',
+                  data: { confirm: 'Удалить вакансию?' } %>
+    <% end %>
+  </div>
+  <div class="col-md-10">
+    <% if policy(Question).create? %>
+      <%= link_to t('buttons.create_question'),
+                  new_vacancy_question_path(@vacancy),
+                  class: 'btn btn-primary mb-4 ml-4' %>
+    <% end %>
+  </div>
+</div>

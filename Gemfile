@@ -21,14 +21,15 @@ gem 'foreman'
 gem 'activerecord-import'
 gem 'draper'
 gem 'jquery-rails'
-gem 'pagy', '~> 5.0'
+gem 'pagy'
 gem 'rails-i18n'
-gem 'sidekiq', '~> 6'
+gem 'sidekiq'
 gem 'valid_email2'
+gem 'pundit'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'faker', '~> 2'
+  gem 'faker'
 end
 
 group :development do
@@ -42,4 +43,5 @@ group :development do
   gem 'rubocop-performance', '~> 1.11', require: false
   gem 'rubocop-rails', '~> 2.11', require: false
   gem 'web-console'
+  gem 'rails-erd'
 end

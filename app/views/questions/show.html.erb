@@ -1,9 +1,9 @@
 <% provide :page_title, 'questions' %>
 
-<div class="row mt-4">
+<div class="row  mt-4">
   <%= render partial: 'answers_section', locals: { question: @question, answers: @answers } %>
-
-  <div class="col-md-4">
-    <%= render partial: 'questions/video_items' %>
-  </div>
+  
+  <%= render partial: 'questions/video_items' %>
 </div>
+
+<%= link_to t("buttons.back_to_vacancy"), vacancy_path(@question.vacancy), class: 'btn btn-secondary mt-4 mb-4' %>

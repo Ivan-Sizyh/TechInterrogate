@@ -6,4 +6,21 @@
   <% else %>
     <%= render @answers %>
   <% end %>
+
+  <% if policy(Answer).create? %>
+   <%= link_to t('buttons.create_answer'),
+                  new_question_answer_path(@question),
+                  class: 'btn btn-primary mt-4' %>
+  <% end %>
+
+  <br>
+
+  <% if policy(@question).destroy? %>
+   <%= link_to t('buttons.delete_question'),
+                  question_path(@question),
+                  method: :delete,
+                  class: 'btn btn-primary mt-4',
+                  turbo: false,
+                  data: { confirm: 'Удалить вопрос?' } %>
+  <% end %>
 </div>

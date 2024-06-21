@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     email = params[:email]
 
     if email.present?
-      user = User.find_by(email:).decorate
+      user = User.find_or_create_by(email:).decorate
 
       if user&.authenticate(params[:password])
         sign_in(user)

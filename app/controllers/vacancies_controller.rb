@@ -1,5 +1,8 @@
 class VacanciesController < ApplicationController
   before_action :set_vacancy, only: %i[show destroy]
+  before_action :require_authentification, except: %i[show index]
+  before_action :authorize_vacancy!
+  after_action :verify_authorized, except: %i[show index]
 
   def index
     @pagy, @vacancies = pagy Vacancy.all
@@ -50,5 +53,9 @@ class VacanciesController < ApplicationController
 
   def vacancy_params
     params.require(:vacancy).permit(:title, :description)
+  end
+
+  def authorize_vacancy!
+    authorize(@vacancy || Vacancy)
   end
 end

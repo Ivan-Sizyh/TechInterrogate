@@ -1,10 +1,12 @@
 class User < ApplicationRecord
+  enum role: { basic: 0, admin: 1 }, _default: :basic, _suffix: :role
+
   attr_accessor :old_password, :remember_token
 
   has_secure_password validations: false
 
   validate :password_presence
-  validate :correct_old_password, on: :update
+  validate :correct_old_password, on: :update, if: -> { password.present? }
   validates :password, confirmation: true, allow_blank: true,
                        length: { minimum: 8, maximum: 70 }
 

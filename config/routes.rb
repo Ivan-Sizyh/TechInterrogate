@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :interviews
 
   resources :vacancies do
-    resources :questions, shallow: true
+    resources :questions, shallow: true do
+      resources :answers, shallow: true, except: %i[index show]
+    end
 
     get 'filter_by_tag', on: :member
     get 'tags/:tag_id', to: 'vacancies#show', on: :member, as: :tags, constraints: { tag_id: /\d+/ }
