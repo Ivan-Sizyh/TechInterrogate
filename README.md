@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Для того чтобы запустить этот проект, на компьютере должен быть установлен ruby 3.1.4 и
+Ruby on Rails 7.0.8
+После установки ruby и Ruby on Rails нужно написать bundle install
+После этого нужно прописать yarn && yarn install
+Также для первого запуска нужно будет написать 
+rails db:prepare
+rails db:seed
+После всех подготовительных операций вы сможете запустить проект с помощью команды bin/dev

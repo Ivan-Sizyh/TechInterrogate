@@ -1,7 +1,7 @@
 <div class="card mt-3 mb-4">
   <div class="card-body">
     <p class="card-text"><strong><%= t('answers.answer_by', responder: answer.responder) %></strong></p>
-    <p class="card-text"><%= raw(answer.text) %></p>
+    <p class="card-text"><%= simple_format(answer.text) %></p>
     <p class="card-text"><em><%= t('answers.answer_date', date: answer.response_date.to_date.strftime('%Y-%m-%d')) %></em></p>
     <% if policy(answer).destroy? %>
        <%= link_to t('buttons.delete_answer'),

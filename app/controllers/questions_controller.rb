@@ -5,6 +5,13 @@ class QuestionsController < ApplicationController
   before_action :set_vacancy, only: %i[new create]
   after_action :verify_authorized, except: %i[show index]
 
+  def index; end
+
+  def show
+    @answers = @question.answers
+    @videos = @question.videos unless @question.video_links.empty?
+  end
+
   def new
     @question = @vacancy.questions.build
   end
@@ -18,11 +25,6 @@ class QuestionsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def show
-    @answers = @question.answers
-    @videos = @question.videos unless @question.video_links.empty?
   end
 
   def destroy

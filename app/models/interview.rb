@@ -12,6 +12,6 @@ class Interview < ApplicationRecord
   private
 
   def build_interview_video
-    self.interview_video = InterviewVideo.create!(interview: self, video: video) if interview_video.nil?
+    self.interview_video = InterviewVideo.create!(interview: self, video:) if interview_video.nil?
   end
 end

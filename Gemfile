@@ -22,10 +22,10 @@ gem 'activerecord-import'
 gem 'draper'
 gem 'jquery-rails'
 gem 'pagy'
+gem 'pundit'
 gem 'rails-i18n'
 gem 'sidekiq'
 gem 'valid_email2'
-gem 'pundit'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
@@ -38,10 +38,10 @@ group :development do
   gem 'bullet'
   gem 'letter_opener'
   gem 'rack-mini-profiler'
+  gem 'rails-erd'
   gem 'rubocop', '~> 1.18', require: false
   gem 'rubocop-i18n', '~> 3', require: false
   gem 'rubocop-performance', '~> 1.11', require: false
   gem 'rubocop-rails', '~> 2.11', require: false
   gem 'web-console'
-  gem 'rails-erd'
 end

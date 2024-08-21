@@ -4,6 +4,10 @@ class AnswersController < ApplicationController
   before_action :set_question, only: %i[new create]
   before_action :find_answer, only: %i[destroy]
 
+  def index; end
+
+  def show; end
+
   def new
     @answer = @question.answers.build
   end
@@ -12,7 +16,7 @@ class AnswersController < ApplicationController
     @answer = @question.answers.build(answer_params)
     @answer.response_date = Date.current
     @answer.responder = current_user.name_or_email
-    @answer.additional = "A{A[A{{A}}]}"
+    @answer.additional = 'A{A[A{{A}}]}'
     @answer.additioner = current_user.name_or_email
 
     if @question.save

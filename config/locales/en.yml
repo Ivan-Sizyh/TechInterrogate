@@ -35,6 +35,7 @@ en:
     save: Save
     register: Register
     login: Log-in
+    back_to_vacancies: Back to vacancies
     delete_vacancy: Delete vacancy
     create_question: Create question
     back_to_vacancy: Back to vacancy

@@ -5,19 +5,19 @@ class VacanciesController < ApplicationController
   after_action :verify_authorized, except: %i[show index]
 
   def index
-    @pagy, @vacancies = pagy Vacancy.all
+    @pagy, @vacancies = pagy Vacancy.order(created_at: :asc)
   end
 
   def show
     tag_id = params[:tag_id]
 
     @questions = if tag_id.present?
-                   @vacancy.questions.where(tag: tag_id).includes(:tag)
+                   @vacancy.questions.where(tag: tag_id)
                  else
-                   @vacancy.questions.includes(:tag)
+                   @vacancy.questions
                  end
 
-    @tags = @questions.map(&:tag).uniq
+    @tags = Tag.all.uniq
   end
 
   def new
