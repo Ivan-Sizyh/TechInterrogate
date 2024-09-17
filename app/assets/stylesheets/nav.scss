@@ -28,4 +28,13 @@ nav {
     font-size: 1.7em;
     font-weight: bold;
   }
+
+  .no-bullet {
+    list-style-type: none;
+  }
+
+  .dropdown-menu.show {
+    right: 0px;
+    left: auto;
+  }
 }

@@ -1,11 +1,65 @@
 ru:
+  pages:
+    login_page:
+      remember_me: Запомнить меня
+    editing: Редактирование
+    registration: Регистрация
+    email: Электронная почта
+    name: Имя
+    password: Пароль
+    password_confirmation: Подтверждение пароля
+    old_password: Старый пароль
+  pagy:
+    nav:
+      next: Следующая
+      prev: Предыдущая
+  activerecord:
+    attributes:
+      vacancy:
+        title: Название
+        description: Описание
+      user:
+        password: Пароль
+        email: Электронная почта
+        name: Имя
+        password_confirmation: Подтверждение пароля
+        old_password: Старый пароль
+    errors:
+      messages:
+        blank: не может быть пустым
+        incorrect_old_password: не коректен
+        incorrect_hardest_password: "пароль слишком простой. Длина пароля должны быть 8-70 символов и включать: 1 заглавную букву, 1 прописную букву, 1 цифру и 1 специальный символ"
+      models:
+        user:
+          attributes:
+            email:
+              blank: не может быть пустой
+            password:
+              blank: не может быть пустым
+            name:
+              blank: не может быть пустым
+        vacancy:
+          attributes:
+            title:
+              blank: "не может быть пустым"
+            description:
+              blank: "не может быть пустым"
   selectors:
     all: Все
   nav:
-    questions: Вопросы
+    vacancies: Вакансии
     interviews: Собеседования
+    sign_in: Вход
+    sign_up: Регистрация
+    logout: Выход
+    edit_profile: Профиль
   buttons:
-    apply: "Применить"
+    apply: Применить
+    create_vacancy: Создать вакансию
+    back: Назад
+    save: Сохранить
+    register: Зарегестрировать
+    login: Войти
   entities:
     question: Вопрос
     vacancy: Вакансия
@@ -16,19 +70,42 @@ ru:
   footer:
     about: "Автор: Иван Сизых"
   vacancy:
+    create:
+      title: Название
+      description: Описание
     show:
-      select_tag: "Выберите тег:"
+      select_tag: "Выберите тэг:"
+      select_vacancy: "Выберите вакансию:"
       select_grade: "Выберите грейд:"
       description:
-        label: "Описание вакансии"
-    index: "Вопросы с собеседований"
+        label: Описание вакансии
+    index: Вопросы с собеседований
     vacancy: "Вакансия: %{vacancy}"
     no_questions: Для данной вакансии вопросы отсутствуют.
     questions_count: "Количество вопросов: %{count}"
   interviews:
     index: Собеседования
-    no_interview: Еще не создано интервью!
+    no_interview: Еще не создано записей собеседований!
   answers:
     answer_by: "Ответ от %{responder}:"
     answer_date: "Дата ответа: %{date}"
+  flash:
+   success_create_vacancy: Вакансия создана успешно!
+   success_delete_vacancy: Вакансия удалена успешно!
+   welcome_user: "Привет, %{name}!"
+   welcome_back: "С возвращением, %{name}!"
+   see_you_later: До скорого возвращения!
+   missing_email: Неверная электронная почта!
+   incorrect_data: Неверный email и/или пароль!
+   already_sign_in: Вы уже вошли!
+   already_not_sign_in: Вы еще не вошли!
+   successful_update: Данные профиля обновленны
+  title_helper:
+    vacancies: Вакансии
+    questions: Вопросы
+    interviews: Собеседования
+    registration: Регистрация
+    login: Вход
+    editing: Редактирование
+
     

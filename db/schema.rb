@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_30_083106) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_16_131624) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,8 +21,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_30_083106) do
     t.bigint "question_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "additional"
-    t.string "additioner"
+    t.text "additional", null: false
+    t.string "additioner", null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
@@ -51,7 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_30_083106) do
   end
 
   create_table "questions", force: :cascade do |t|
-    t.string "text"
+    t.string "text", null: false
     t.bigint "vacancy_id", null: false
     t.bigint "tag_id"
     t.datetime "created_at", null: false
@@ -61,14 +61,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_30_083106) do
   end
 
   create_table "tags", force: :cascade do |t|
-    t.string "title"
+    t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "email", null: false
+    t.string "name", null: false
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "remember_token_digest"
+    t.index ["email"], name: "index_users_on_email", unique: true
+  end
+
   create_table "vacancies", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
+    t.string "title", null: false
+    t.text "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

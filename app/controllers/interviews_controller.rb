@@ -10,4 +10,13 @@ class InterviewsController < ApplicationController
 
     @interviews = @interviews.where(grade_id: @grade_id) if @grade_id.present?
   end
+
+  def new; end
+
+  def edit; end
+  def create; end
+
+  def update; end
+
+  def destroy; end
 end
